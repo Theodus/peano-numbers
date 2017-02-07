@@ -19,6 +19,9 @@ test(@mtimes, 1, 1, 1)
 test(@mtimes, 10, 5, 50)
 test(@mtimes, 5, 10, 50)
 % TODO division
+% TODO equality and comparison operations
+
+% TODO vector of test thunks; pretty print on success
 
 function test(f, a, b, c)
   as_nat = @(f, a, b) nat2int(f(int2nat(a), int2nat(b)));
@@ -29,7 +32,6 @@ function test(f, a, b, c)
       error('Error expected');
     catch e
       assert(strcmp(e.message, c));
-
     end
   else
     t(f, a, b, c);
