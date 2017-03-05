@@ -1,14 +1,11 @@
-function p = int2nat(i)
-%INT2PEANO Summary of this function goes here
-%   Detailed explanation goes here
-  % TODO check if i is rational
-  p = i2p(i, Zero);
-end
-
-function p = i2p(i, n)
-  if i == 0
-    p = n;
-  else
-    p = i2p(i-1, Succ(n));
+function n = int2nat(i)
+% int2nat creates a Nat from an integer
+  if i < 0
+    error('Nat cannot be created from a negative number')
+  end
+  
+  n = Zero;
+  for a=1:i
+    n = Succ(n);
   end
 end
