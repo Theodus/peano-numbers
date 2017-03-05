@@ -74,5 +74,21 @@ classdef Succ < Nat
         b = b.pred();
       end
     end
+    function n = mrdivide(self, other)
+      if other.isZero()
+        error('Cannot divide by Zero')
+      end
+      
+      n = Zero;
+      a = self;
+      while ~a.isZero()
+        try
+          a = a - other;
+        catch
+          break
+        end
+        n = Succ(n);
+      end
+    end
   end
 end

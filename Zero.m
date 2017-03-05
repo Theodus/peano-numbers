@@ -30,5 +30,11 @@ classdef Zero < Nat
       % 0 * a = 0
       n = self;
     end
+    function n = mrdivide(self, other)
+      if other.isZero()
+        error('Cannot divide by Zero');
+      end
+      n = self;
+    end
   end
 end

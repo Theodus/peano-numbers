@@ -18,7 +18,15 @@ test(@mtimes, 1, 0, 0)
 test(@mtimes, 1, 1, 1)
 test(@mtimes, 10, 5, 50)
 test(@mtimes, 5, 10, 50)
-% TODO division
+% division
+test(@mrdivide, 0, 0, 'Cannot divide by Zero')
+test(@mrdivide, 0, 1, 0)
+test(@mrdivide, 1, 0, 'Cannot divide by Zero')
+test(@mrdivide, 1, 1, 1)
+test(@mrdivide, 50, 5, 10)
+test(@mrdivide, 50, 10, 5)
+test(@mrdivide, 3, 2, 1)
+test(@mrdivide, 2, 3, 0)
 
 % comparison operations
 a = Zero;

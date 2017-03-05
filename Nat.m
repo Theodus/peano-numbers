@@ -10,7 +10,7 @@ classdef (Abstract) Nat
     n = plus(self, other)
     n = minus(self, other)
     n = mtimes(self, other)
-    %n = mrdivide(self, other)
+    n = mrdivide(self, other)
   end
   methods
     function disp(self)
