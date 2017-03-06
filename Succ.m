@@ -48,9 +48,6 @@ classdef Succ < Nat
       else
         n = self.N - other.N;
       end
-      
-      %n = self;
-      %if 
     end
     function n = mtimes(self, other)
       % a * 0 = 0
