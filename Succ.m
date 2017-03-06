@@ -1,7 +1,7 @@
 classdef Succ < Nat
   % Succ represents the Successor of a number n according to the Peano
   % axioms.
-  properties
+  properties (Access = private)
     N
   end
   methods (Static)
